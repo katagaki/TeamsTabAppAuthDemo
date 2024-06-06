@@ -1,22 +1,14 @@
 import { app, authentication } from "@microsoft/teams-js";
+import { jwtDecode } from "jwt-decode";
 
 async function getTeamsClientAuthToken() {
   try {
-    return await authentication.getAuthToken();
+    let authToken = await authentication.getAuthToken();
+    return jwtDecode(authToken);
   } catch (error) {
     console.log(error);
     return undefined;
   }
 }
 
-async function getTeamsUserProfile() {
-  try {
-    const appContext = await app.getContext();
-    return appContext.user;
-  } catch (error) {
-    console.log(error);
-    return undefined;
-  }
-}
-
-export { getTeamsClientAuthToken, getTeamsUserProfile };
+export { getTeamsClientAuthToken };

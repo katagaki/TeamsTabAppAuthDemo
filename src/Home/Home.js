@@ -13,7 +13,7 @@ import {
   Toolbar,
   webDarkTheme
 } from "@fluentui/react-components";
-import {getTeamsClientAuthToken, getTeamsUserProfile} from "../Auth/TeamsAuth";
+import {getTeamsClientAuthToken} from "../Auth/TeamsAuth";
 import {getAppServiceAuthToken} from "../Auth/EasyAuth";
 import {app} from "@microsoft/teams-js";
 
@@ -46,8 +46,7 @@ function Login() {
     try {
       if (teamsClientSideToken) {
         console.log("Using Teams auth");
-        let userProfile = await getTeamsUserProfile();
-        setUserName(userProfile.loginHint);
+        setUserName(teamsClientSideToken.name);
         setIsAuthenticatedUsingTeams(true)
       } else {
         console.log("Using Easy Auth");

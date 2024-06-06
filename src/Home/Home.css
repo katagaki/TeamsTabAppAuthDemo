@@ -1,0 +1,24 @@
+div {
+    user-select: none;
+}
+
+.mainContent {
+    width: calc(100% - 32px);
+    position: absolute;
+    padding: 16px;
+}
+
+.toolbar {
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+}
+
+a, button,
+.title, .persona {
+    cursor: default!important;
+}
+
+.spacer {
+    flex-grow: 1;
+}

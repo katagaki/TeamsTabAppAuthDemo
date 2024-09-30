@@ -1,15 +1,14 @@
 {
-  "name": "TeamsTabAppAuthDemo",
-  "version": "0.1.0",
-  "private": true,
+  "name": "teams-tab-app-auth-demo",
+  "version": "1.0.1",
   "dependencies": {
-    "@fluentui/react-components": "^9.51.1",
-    "@fluentui/react-icons": "^2.0.240",
-    "@microsoft/teams-js": "^2.23.0",
+    "@fluentui/react-components": "^9.54.17",
+    "@fluentui/react-icons": "^2.0.259",
+    "@microsoft/teams-js": "^2.28.0",
     "jwt-decode": "^4.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.23.1",
+    "react-router-dom": "^6.26.2",
     "react-scripts": "5.0.1"
   },
   "scripts": {
@@ -20,18 +19,6 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
     ]
   }
 }
